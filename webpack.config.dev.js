@@ -6,6 +6,11 @@ const commonConfig = require('./webpack.config.common')
 module.exports = merge(commonConfig,{
     mode: 'development',
     devtool: 'inline-source-map',
+    plugins: [new ESLintPlugin({
+        extensions:  [`js`],
+        exclude: [`/node_modules/`,
+            `/bower_components/`,]
+    })],
     devServer: {
         port: 3009,
         hot: true,

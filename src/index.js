@@ -1,4 +1,10 @@
-import {data} from  './data';
+import './style/index.scss'
+import {createElements} from "./data/elements";
+import {elementAddEventListener} from "./data/functions";
 
 
-console.log(data)
+
+
+createElements()
+elementAddEventListener()
+
